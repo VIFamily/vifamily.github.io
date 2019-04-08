@@ -288,7 +288,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2019/04/08/「LabVIEW」隐藏的截图技巧/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/08/「LabVIEW」隐藏的截图技巧/" itemprop="commentCount"></span>
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/08/「LabVIEW」隐藏的截图技巧/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -409,14 +409,7 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
     </div>
-
   
 
 
@@ -672,26 +665,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://VIFamily.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2019/04/08/「LabVIEW」隐藏的截图技巧/';
-          this.page.identifier = '2019/04/08/「LabVIEW」隐藏的截图技巧/';
-          this.page.title = '「LabVIEW」隐藏的截图技巧';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://VIFamily.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -707,12 +680,38 @@
 
 
 
+  
 
 
 
 
 
 
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'Yu8mR7eFSP2rNzuQDq1jkOjg-gzGzoHsz',
+        appKey: 'tqQ25ld6PtEba9M9zBYKMd7P',
+        placeholder: '点评一下',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
